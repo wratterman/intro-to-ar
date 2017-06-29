@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629021934) do
+ActiveRecord::Schema.define(version: 20170629152222) do
 
   create_table "breeds", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170629021934) do
 
   create_table "jockeys", force: :cascade do |t|
     t.text "name"
+    t.text "favortie_color"
   end
 
 end

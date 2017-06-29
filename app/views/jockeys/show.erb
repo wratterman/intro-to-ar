@@ -2,10 +2,13 @@
 
 <h1><%= @jockey.name %></h1>
 
-<p><%@jockey.horses.each do |horse|%>
+<p>Horses: <%@jockey.horses.each do |horse|%>
     <%=horse.name%>
     <%end%>
 </p>
+
+<p>Total Winnings: $<%=@total_winnings%>0 </p>
+<p>Average Winning by Horse: $<%=@average_winngings%>0 </p>
 
 <a href="/jockeys/<%= @jockey.id %>/edit">Edit</a>
 <form action="/jockeys/<%= @jockey.id %>" method="POST">
