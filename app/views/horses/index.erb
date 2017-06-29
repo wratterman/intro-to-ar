@@ -12,9 +12,9 @@
   <% @horses.each do |horse| %>
     <tr>
       <td><%= horse.name %></td>
-      <td><%= horse.breed.name %></td>
-      <td><%= horse.total_winnings %></td>
-      <td><%= horse.jockey.name %></td>
+      <td><%= horse.breed.name unless horse.breed_id == nil %></td>
+      <td>$<%= horse.total_winnings %>.00</td>
+      <td><%= horse.jockey.name unless horse.jockey_id == nil %></td>
       <td><a href="/horses/<%=horse.id %>">Additional Info</a></td>
       <td>
         <form action="/horses/<%= horse.id %>" method="post">

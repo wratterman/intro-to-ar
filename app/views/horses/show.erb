@@ -1,6 +1,6 @@
 <h1><%= @horse.name %></h1>
 
 <h2>Info</h2>
-<p>Breed: <%= @horse.breed.name %></p>
-<p>Jockey: <%= @horse.jockey.name %></p>
+<p>Breed: <%= @horse.breed.name unless @horse.breed_id == nil %></p>
+<p>Jockey: <%= @horse.jockey.name unless @horse.jockey_id == nil%></p>
 <p>Total Winnings: <%= @horse.total_winnings %></p>
