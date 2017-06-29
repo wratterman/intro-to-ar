@@ -1,0 +1,14 @@
+<a href="/jockeys">Jockey Index</a>
+
+<h1><%= @jockey.name %></h1>
+
+<p><%@jockey.horses.each do |horse|%>
+    <%=horse.name%>
+    <%end%>
+</p>
+
+<a href="/jockeys/<%= @jockey.id %>/edit">Edit</a>
+<form action="/jockeys/<%= @jockey.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete"/>
+</form>
